@@ -1,0 +1,13 @@
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [webportal / Compile / fastOptJS] Found inputs: /Users/dom/IdeaProjects/webportal/*.{java,scala},/Users/dom/IdeaProjects/webportal/src/main/java/**/*.{java,scala},/Users/dom/IdeaProjects/webportal/src/main/resources/**/*,/Users/dom/IdeaProjects/webportal/src/main/scala/**/*.{java,scala},/Users/dom/IdeaProjects/webportal/src/main/scala-2.13/**/*.{java,scala}[0m
+[0m[[0m[0minfo[0m] [0m[0m1. Monitoring source files for webportal/fastOptJS...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mwebportal / Compile / fastOptJS - Accepted event for /Users/dom/IdeaProjects/webportal/src/main/scala/gpp/genesearch/search.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(/Users/dom/IdeaProjects/webportal/src/main/scala/gpp/genesearch/search.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/dom/IdeaProjects/webportal/src/main/scala/gpp/genesearch/search.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/dom/IdeaProjects/webportal/src/main/scala/gpp/genesearch/search.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating update event for modified /Users/dom/IdeaProjects/webportal/src/main/scala/gpp/genesearch/search.scala (previous stamp: Hash(be1f558717252f18453a1434bb5625fb0d7a15f7), current stamp: Hash(46d0b24cf1cf0424eea983ae377d51da4db224d4))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived file event actions: /Users/dom/IdeaProjects/webportal/src/main/scala/gpp/genesearch/search.scala -> Trigger. Returning: (Update(/Users/dom/IdeaProjects/webportal/src/main/scala/gpp/genesearch/search.scala, 2019-Dec-01 09:08:31.091 ET),Trigger)[0m
+[0m[[0m[0minfo[0m] [0m[0mBuild triggered by /Users/dom/IdeaProjects/webportal/src/main/scala/gpp/genesearch/search.scala. Running 'fastOptJS'.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received file event Trigger for Update(/Users/dom/IdeaProjects/webportal/src/main/scala/gpp/genesearch/search.scala, 2019-Dec-01 09:08:31.091 ET).[0m
+[0m[[0m[0minfo[0m] [0m[0m2. Monitoring source files for webportal/fastOptJS...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
