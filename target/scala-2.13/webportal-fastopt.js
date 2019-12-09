@@ -1813,7 +1813,7 @@ $c_Lgpp_genesearch_search$.prototype.init___ = (function() {
 $c_Lgpp_genesearch_search$.prototype.error__T__V = (function(i) {
   (0, $g.$)("#spiny").css("display", "none");
   (0, $g.$)("#spiny2").css("display", "none");
-  $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().alert((("Could not find: " + i) + "\n\nMake sure the species and search inputs are correct.\n\nToo many NCBI API Calls too quickly can cause unexpected errors."))
+  $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().alert((("Could not find gene/transcript: " + i) + "\n\nMake sure the species and search inputs are correct.\n\nToo many NCBI API Calls too quickly can cause unexpected errors."))
 });
 $c_Lgpp_genesearch_search$.prototype.input__Lorg_scalajs_dom_raw_HTMLBodyElement__V = (function(i) {
   var inputtext2 = (0, $g.$)(("#" + $as_T(i.getAttribute("id")))).val();
@@ -1847,7 +1847,7 @@ $c_Lgpp_genesearch_search$.prototype.main__AT__V = (function(args) {
   var content = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().createElement("input");
   content.setAttribute("id", "inputGroup-sizing-lg");
   content.setAttribute("oninput", "input(this)");
-  content.setAttribute("placeholder", "Enter gene symbol, id, and/or transcript");
+  content.setAttribute("placeholder", "Enter gene symbol, Id, and/or transcript");
   var button = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().createElement("button");
   var groupAppend = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().createElement("div");
   var bcont = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().createElement("div");
@@ -1923,9 +1923,9 @@ $c_Lgpp_genesearch_search$.prototype.addClickedMessage__V = (function() {
     res1.setAttribute("class", "border border-success container");
     res2.setAttribute("class", "border border-info container");
     res3.setAttribute("class", "border border-secondary container");
-    res1.innerHTML = "<p style='margin-bottom:0px'><b class='text-success' style='font-size:14px'><span class='badge badge-success border' style='font-size:12px'>100% </span> of shRNA constructs match to this Gene Id/transcript Specificity-Defining Region (SDR)</b></p><p style='margin-bottom:0px'>This list includes all shRNAs that have a perfect SDR match to the Gene Id/transcript above download buttons, regardless of what transcript they were originally designed to target. For example, this list can include shRNAs that were originally designed to target: (i) a different isoform or obsolete version of this transcript (as annotated by NCBI), (ii) a transcript of an orthologous gene (in this collection, generally human-to-mouse or mouse-to-human), or (iii) a transcript of a different gene (from the same or different taxon).</p>";
-    res2.innerHTML = "<p style='margin-bottom:0px'><b class='text-info' style='font-size:14px'><span class='badge badge-info border' style='font-size:12px'> >84% </span> of shRNA constructs match to this Gene Id/transcript</b></p><p style='margin-bottom:0px'>This list includes shRNAs that have at least a >84% (16 of 19 bases) Specificity-Defining Region match to the gene id/transcript above the download buttons, regardless of what gene id/transcript they were originally designed to target. For example, this list can include shRNAs that were originally designed to target: (i) a different isoform or obsolete version of this transcript (as annotated by NCBI), (ii) a transcript of an orthologous gene (in this collection, generally human-to-mouse or mouse-to-human), or (iii) a transcript of a different gene (from the same or different taxon). NOTE: this download is a superset of the result set including 100% matches.</p>";
-    res3.innerHTML = "<p style='margin-bottom:0px'><b class='text-secondary' style='font-size:14px'><span class='badge badge-secondary border' style='font-size:12px'>ORF </span> constructs matching to Gene Id/transcript </b></p><p style='margin-bottom:0px'>This list includes ORFs that match with the gene id/transcript above the download buttons, ORFs can regulate eukaryotic gene expression through the sythesis or transportation of amino acids </p>";
+    res1.innerHTML = "<p style='margin-bottom:0px'><b class='text-success' style='font-size:14px'><span class='badge badge-success border' style='font-size:12px'>100% </span> of shRNA constructs match to this Gene Id/transcript Specificity-Defining Region (SDR)</b></p><p style='margin-bottom:0px'>This list includes all shRNAs that have a perfect SDR match to the gene Id/transcript above download buttons, regardless of what transcript they were originally designed to target. For example, this list can include shRNAs that were originally designed to target: (i) a different isoform or obsolete version of this transcript (as annotated by NCBI), (ii) a transcript of an orthologous gene (in this collection, generally human-to-mouse or mouse-to-human), or (iii) a transcript of a different gene (from the same or different taxon).</p>";
+    res2.innerHTML = "<p style='margin-bottom:0px'><b class='text-info' style='font-size:14px'><span class='badge badge-info border' style='font-size:12px'> >84% </span> of shRNA constructs match to this Gene Id/transcript</b></p><p style='margin-bottom:0px'>This list includes shRNAs that have at least a >84% (16 of 19 bases) Specificity-Defining Region match to the gene Id/transcript above the download buttons, regardless of what gene id/transcript they were originally designed to target. For example, this list can include shRNAs that were originally designed to target: (i) a different isoform or obsolete version of this transcript (as annotated by NCBI), (ii) a transcript of an orthologous gene (in this collection, generally human-to-mouse or mouse-to-human), or (iii) a transcript of a different gene (from the same or different taxon). NOTE: this download is a superset of the result set including 100% matches.</p>";
+    res3.innerHTML = "<p style='margin-bottom:0px'><b class='text-secondary' style='font-size:14px'><span class='badge badge-secondary border' style='font-size:12px'>ORF </span> constructs matching to Gene Id/transcript </b></p><p style='margin-bottom:0px'>This list includes ORFs that match with the gene Id/transcript above the download buttons, ORFs can regulate eukaryotic gene expression through the sythesis or transportation of amino acids </p>";
     res1.setAttribute("style", "padding: 6px;box-shadow:1px 1px 3.5px grey;border-radius:20px;font-size:12px;margin-top:26.9px;margin-bottom:10px;width:80%;border-width:2px!important;visibility: hidden;");
     res2.setAttribute("style", "padding: 6px;box-shadow:1px 1px 3.5px grey;border-radius:20px;font-size:12px;margin-bottom:10px;width:80%;border-width:2px!important;visibility: hidden;");
     res3.setAttribute("style", "padding: 6px;box-shadow:1px 1px 3.5px grey;border-radius:20px;font-size:12px;margin-bottom:10px;width:80%;border-width:2px!important;visibility: hidden;");
@@ -1949,7 +1949,7 @@ $c_Lgpp_genesearch_search$.prototype.addClickedMessage__V = (function() {
     $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body.appendChild(res3);
     var inputtext = (0, $g.$)("#inputGroup-sizing-lg").val();
     if (($objectToString(inputtext) === "")) {
-      $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().alert("Enter in a gene symbol, gene id, or transcript id in the search box");
+      $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().alert("Enter in a gene symbol, gene Id, or transcript Id in the search box");
       (0, $g.$)("#spiny").css("display", "none");
       (0, $g.$)("#spiny2").css("display", "none");
       return (void 0)
@@ -2320,9 +2320,9 @@ $c_Lgpp_genesearch_search$.prototype.appendRes__T__T__T__V = (function(specs, ur
   var gtitle = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().createElement("h5");
   if (((gene !== "none") && (gene !== "trans"))) {
     gtitle.innerHTML = (((((((((("<span class='badge badge-primary'>" + gene) + "</span> <a target='_blank' rel='noopener noreferrer' href='https://portals.broadinstitute.org/gpp/public/gene/details?geneId=") + urlid) + "'><span >Gene Id: ") + urlid) + "</span></a> <a target='_blank' rel='noopener noreferrer' href='https://www.ncbi.nlm.nih.gov/gene/") + urlid) + "'<span class='badge badge-light border'>NCBI</span></a> <small><i>(") + specs) + ")</i><small>");
-    dwnldbutton1.innerHTML = (("<b>100%</b> matching shRNA constructs for " + $as_T(gene.toUpperCase())) + " CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px' >cloud_download</i>");
-    dwnldbutton2.innerHTML = (("<b>>84%</b> matching shRNA constructs for " + $as_T(gene.toUpperCase())) + " CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>");
-    dwnldbutton3.innerHTML = (("<b>ORF</b> constructs matching to Gene Id: " + $as_T(gene.toUpperCase())) + " CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>");
+    dwnldbutton1.innerHTML = (("<b>100%</b> matching shRNA constructs for " + gene) + " CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px' >cloud_download</i>");
+    dwnldbutton2.innerHTML = (("<b>>84%</b> matching shRNA constructs for " + gene) + " CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>");
+    dwnldbutton3.innerHTML = (("<b>ORF</b> constructs that match to " + gene) + " CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>");
     dwnldctnr.setAttribute("href", ("https://portals.broadinstitute.org/gpp/public/gene/details?view=csv&grid=1&grid=1&geneId=" + urlid));
     dwnldctnr.setAttribute("download", (("shRNA-geneId-" + urlid) + "-100.csv"));
     dwnldctnr2.setAttribute("href", ("https://portals.broadinstitute.org/gpp/public/gene/details?view=csv&grid=2&grid=2&geneId=" + urlid));
@@ -2333,7 +2333,7 @@ $c_Lgpp_genesearch_search$.prototype.appendRes__T__T__T__V = (function(specs, ur
     gtitle.innerHTML = ((((((((" <a target='_blank' rel='noopener noreferrer' href='https://portals.broadinstitute.org/gpp/public/gene/details?geneId=" + urlid) + "'><span >Gene Id: ") + urlid) + "</span></a> <a target='_blank' rel='noopener noreferrer' href='https://www.ncbi.nlm.nih.gov/gene/") + urlid) + "'<span class='badge badge-light border'>NCBI</span></a> <small><i>(") + specs) + ")</i><small>");
     dwnldbutton1.innerHTML = (("<b>100%</b> matching shRNA constructs for Gene Id: " + urlid) + " CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>");
     dwnldbutton2.innerHTML = (("<b>>84%</b> matching shRNA constructs for Gene Id: " + urlid) + " CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>");
-    dwnldbutton3.innerHTML = (("<b>ORF</b> constructs matching to Gene Id: " + $as_T(gene.toUpperCase())) + " CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>");
+    dwnldbutton3.innerHTML = (("<b>ORF</b> constructs matching to Gene Id: " + urlid) + " CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>");
     dwnldctnr3.setAttribute("href", ("https://portals.broadinstitute.org/gpp/public/gene/details?view=csv&grid=6&grid=6&geneId=" + urlid));
     dwnldctnr3.setAttribute("download", (("ORF-geneId-" + urlid) + "-ORF.csv"));
     dwnldctnr.setAttribute("href", ("https://portals.broadinstitute.org/gpp/public/gene/details?view=csv&grid=1&grid=1&geneId=" + urlid));
