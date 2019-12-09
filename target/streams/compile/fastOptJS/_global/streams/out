@@ -1,16 +1,16 @@
 [0m[[0m[0minfo[0m] [0m[0mFast optimizing /Users/dom/IdeaProjects/webportal/target/scala-2.13/webportal-fastopt.js[0m
-[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 43931 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 18172 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mBasic Linking: 63691 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 48246 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 20863 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasic Linking: 71406 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Batch mode: false[0m
-[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Incremental part: 12945 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Incremental part: 265545 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizing 1 methods.[0m
-[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizer part: 3115 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: 19447 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 37087 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 6052 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: 43685 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizer part: 2560 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: 270715 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 35148 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 3678 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: 39201 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mEmitter: Class tree cache stats: reused: 668 -- invalidated: 1[0m
 [0m[[0m[0mdebug[0m] [0m[0mEmitter: Method tree cache stats: resued: 1188 -- invalidated: 1[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter (write output): 38583 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter (write output): 41620 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 4 -- invalidated: 1 -- trees read: 1[0m

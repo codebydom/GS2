@@ -1869,7 +1869,7 @@ $c_Lgpp_genesearch_search$.prototype.main__AT__V = (function(args) {
   selecText.setAttribute("class", "text-secondary");
   selecText.setAttribute("id", "selectIt");
   selecText.setAttribute("style", "margin-left:-11px;visibility:hidden;");
-  selecText.innerHTML = "Select a species type";
+  selecText.innerHTML = "Select a species: ";
   bcont.appendChild(selecText);
   bcont.appendChild(sbut);
   bcont.appendChild(sbut2);
