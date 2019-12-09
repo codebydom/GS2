@@ -20,7 +20,7 @@ object search {
     val content = document.createElement("input") // create search input for the user
     content.setAttribute("id", "inputGroup-sizing-lg")
     content.setAttribute("oninput","input(this)")
-    content.setAttribute("placeholder", "Enter gene symbol, id, and/or transcript")
+    content.setAttribute("placeholder", "Enter gene symbol, Id, and/or transcript")
     val button = document.createElement("button") // Button for search input
     val groupAppend = document.createElement("div") // div for grouping button and content
     val bcont = document.createElement("div") // contains the button and content of input
@@ -90,9 +90,9 @@ object search {
       val gtitle = document.createElement("h5")
       if (gene!="none" && gene!="trans") { // If there is a gene name and no transcript, use this output for file download link, when a gene symbol has to be validated
         gtitle.innerHTML =   "<span class='badge badge-primary'>"+gene+"</span> <a target='_blank' rel='noopener noreferrer' href='https://portals.broadinstitute.org/gpp/public/gene/details?geneId="+urlid+"'><span >Gene Id: "+urlid+"</span></a>"+" <a target='_blank' rel='noopener noreferrer' href='https://www.ncbi.nlm.nih.gov/gene/"+urlid+"'<span class='badge badge-light border'>NCBI</span></a> "+"<small><i>(" + specs + ")</i><small>"
-        dwnldbutton1.innerHTML = "<b>100%</b> matching shRNA constructs for "+gene.toUpperCase()+" CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px' >cloud_download</i>"
-        dwnldbutton2.innerHTML = "<b>>84%</b> matching shRNA constructs for "+gene.toUpperCase()+" CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>"
-        dwnldbutton3.innerHTML = "<b>ORF</b> constructs matching to Gene Id: "+gene.toUpperCase()+" CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>"
+        dwnldbutton1.innerHTML = "<b>100%</b> matching shRNA constructs for "+gene+" CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px' >cloud_download</i>"
+        dwnldbutton2.innerHTML = "<b>>84%</b> matching shRNA constructs for "+gene+" CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>"
+        dwnldbutton3.innerHTML = "<b>ORF</b> constructs that match to "+gene+" CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>"
         dwnldctnr.setAttribute("href","https://portals.broadinstitute.org/gpp/public/gene/details?view=csv&grid=1&grid=1&geneId="+urlid)
         dwnldctnr.setAttribute("download","shRNA-geneId-"+urlid+"-100.csv")
         dwnldctnr2.setAttribute("href","https://portals.broadinstitute.org/gpp/public/gene/details?view=csv&grid=2&grid=2&geneId="+urlid)
@@ -103,7 +103,7 @@ object search {
         gtitle.innerHTML = " <a target='_blank' rel='noopener noreferrer' href='https://portals.broadinstitute.org/gpp/public/gene/details?geneId="+urlid+"'><span >Gene Id: "+urlid+"</span></a>"+" <a target='_blank' rel='noopener noreferrer' href='https://www.ncbi.nlm.nih.gov/gene/"+urlid+"'<span class='badge badge-light border'>NCBI</span></a> "+"<small><i>(" + specs + ")</i><small>"
         dwnldbutton1.innerHTML = "<b>100%</b> matching shRNA constructs for Gene Id: "+urlid.toString+" CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>"
         dwnldbutton2.innerHTML = "<b>>84%</b> matching shRNA constructs for Gene Id: "+urlid.toString+" CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>"
-        dwnldbutton3.innerHTML = "<b>ORF</b> constructs matching to Gene Id: "+gene.toUpperCase()+" CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>"
+        dwnldbutton3.innerHTML = "<b>ORF</b> constructs matching to Gene Id: "+urlid.toString+" CSV <i class=\"material-icons\" style='vertical-align:middle;margin-top:-5px'>cloud_download</i>"
         dwnldctnr3.setAttribute("href","https://portals.broadinstitute.org/gpp/public/gene/details?view=csv&grid=6&grid=6&geneId="+urlid)
         dwnldctnr3.setAttribute("download","ORF-geneId-"+urlid+"-ORF.csv")
         dwnldctnr.setAttribute("href","https://portals.broadinstitute.org/gpp/public/gene/details?view=csv&grid=1&grid=1&geneId="+urlid)
@@ -159,7 +159,7 @@ object search {
     jQ("#r2").remove()
     jQ("#r3").remove()
     document.body.appendChild(cntrCtr2)
-    // RESULT DESCRITIONS RENDERING (COLORFUL DESCRIPTIONS ON THE BOTTOM OF APP)
+    // RESULT DESCRIPTIONS RENDERING (COLORFUL DESCRIPTIONS ON THE BOTTOM OF APP)
     val res1 = document.createElement("div")
     val res2 = document.createElement("div")
     val res3 = document.createElement("div")
@@ -169,9 +169,9 @@ object search {
     res1.setAttribute("class","border border-success container")
     res2.setAttribute("class","border border-info container")
     res3.setAttribute("class","border border-secondary container")
-    res1.innerHTML = "<p style='margin-bottom:0px'><b class='text-success' style='font-size:14px'><span class='badge badge-success border' style='font-size:12px'>100% </span> of shRNA constructs match to this Gene Id/transcript Specificity-Defining Region (SDR)</b></p><p style='margin-bottom:0px'>This list includes all shRNAs that have a perfect SDR match to the Gene Id/transcript above download buttons, regardless of what transcript they were originally designed to target. For example, this list can include shRNAs that were originally designed to target: (i) a different isoform or obsolete version of this transcript (as annotated by NCBI), (ii) a transcript of an orthologous gene (in this collection, generally human-to-mouse or mouse-to-human), or (iii) a transcript of a different gene (from the same or different taxon).</p>"
-    res2.innerHTML = "<p style='margin-bottom:0px'><b class='text-info' style='font-size:14px'><span class='badge badge-info border' style='font-size:12px'> >84% </span> of shRNA constructs match to this Gene Id/transcript</b></p><p style='margin-bottom:0px'>This list includes shRNAs that have at least a >84% (16 of 19 bases) Specificity-Defining Region match to the gene id/transcript above the download buttons, regardless of what gene id/transcript they were originally designed to target. For example, this list can include shRNAs that were originally designed to target: (i) a different isoform or obsolete version of this transcript (as annotated by NCBI), (ii) a transcript of an orthologous gene (in this collection, generally human-to-mouse or mouse-to-human), or (iii) a transcript of a different gene (from the same or different taxon). NOTE: this download is a superset of the result set including 100% matches.</p>"
-    res3.innerHTML = "<p style='margin-bottom:0px'><b class='text-secondary' style='font-size:14px'><span class='badge badge-secondary border' style='font-size:12px'>ORF </span> constructs matching to Gene Id/transcript </b></p><p style='margin-bottom:0px'>This list includes ORFs that match with the gene id/transcript above the download buttons, ORFs can regulate eukaryotic gene expression through the sythesis or transportation of amino acids </p>"
+    res1.innerHTML = "<p style='margin-bottom:0px'><b class='text-success' style='font-size:14px'><span class='badge badge-success border' style='font-size:12px'>100% </span> of shRNA constructs match to this Gene Id/transcript Specificity-Defining Region (SDR)</b></p><p style='margin-bottom:0px'>This list includes all shRNAs that have a perfect SDR match to the gene Id/transcript above download buttons, regardless of what transcript they were originally designed to target. For example, this list can include shRNAs that were originally designed to target: (i) a different isoform or obsolete version of this transcript (as annotated by NCBI), (ii) a transcript of an orthologous gene (in this collection, generally human-to-mouse or mouse-to-human), or (iii) a transcript of a different gene (from the same or different taxon).</p>"
+    res2.innerHTML = "<p style='margin-bottom:0px'><b class='text-info' style='font-size:14px'><span class='badge badge-info border' style='font-size:12px'> >84% </span> of shRNA constructs match to this Gene Id/transcript</b></p><p style='margin-bottom:0px'>This list includes shRNAs that have at least a >84% (16 of 19 bases) Specificity-Defining Region match to the gene Id/transcript above the download buttons, regardless of what gene id/transcript they were originally designed to target. For example, this list can include shRNAs that were originally designed to target: (i) a different isoform or obsolete version of this transcript (as annotated by NCBI), (ii) a transcript of an orthologous gene (in this collection, generally human-to-mouse or mouse-to-human), or (iii) a transcript of a different gene (from the same or different taxon). NOTE: this download is a superset of the result set including 100% matches.</p>"
+    res3.innerHTML = "<p style='margin-bottom:0px'><b class='text-secondary' style='font-size:14px'><span class='badge badge-secondary border' style='font-size:12px'>ORF </span> constructs matching to Gene Id/transcript </b></p><p style='margin-bottom:0px'>This list includes ORFs that match with the gene Id/transcript above the download buttons, ORFs can regulate eukaryotic gene expression through the sythesis or transportation of amino acids </p>"
     res1.setAttribute("style","padding: 6px;box-shadow:1px 1px 3.5px grey;border-radius:20px;font-size:12px;margin-top:26.9px;margin-bottom:10px;width:80%;border-width:2px!important;visibility: hidden;")
     res2.setAttribute("style","padding: 6px;box-shadow:1px 1px 3.5px grey;border-radius:20px;font-size:12px;margin-bottom:10px;width:80%;border-width:2px!important;visibility: hidden;")
     res3.setAttribute("style","padding: 6px;box-shadow:1px 1px 3.5px grey;border-radius:20px;font-size:12px;margin-bottom:10px;width:80%;border-width:2px!important;visibility: hidden;")
@@ -194,7 +194,7 @@ object search {
     document.body.appendChild(res3)
     val inputtext = jQ("#inputGroup-sizing-lg").value() // getting value of search input
     if (inputtext.toString==""){
-      dom.window.alert("Enter in a gene symbol, gene id, or transcript id in the search box") // warning about not entering anything into search box
+      dom.window.alert("Enter in a gene symbol, gene Id, or transcript Id in the search box") // warning about not entering anything into search box
       jQ("#spiny").css("display","none") // getting rid of spinner
       jQ("#spiny2").css("display","none")
       return
@@ -234,7 +234,7 @@ object search {
               error(w)
           }
         } else if (w.contains("_")) { // if the input has a _ it is treated as a transcript
-          if (w.contains(".")) { // this means this transcrip has version and should search for it
+          if (w.contains(".")) { // this means this transcript has version and should search for it
             //check to see transcript is a mouse or a human, if not an error is returned
             val ajxnMaus = Ajax.get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=" + w)
             ajxnMaus.onComplete {
@@ -283,7 +283,6 @@ object search {
               case Failure(e) =>
                 error(w)
                 return
-
             }
           }
         } else { // if the input was not a transcript or a gene id, we default to attempting to finding input as a gene symbol
@@ -381,6 +380,6 @@ object search {
   def error(i:String): Unit = {
     jQ("#spiny").css("display","none")
     jQ("#spiny2").css("display","none")
-    dom.window.alert("Could not find: "+i+"\n\nMake sure the species and search inputs are correct."+"\n\nToo many NCBI API Calls too quickly can cause unexpected errors.")
+    dom.window.alert("Could not find gene/transcript: "+i+"\n\nMake sure the species and search inputs are correct."+"\n\nToo many NCBI API Calls too quickly can cause unexpected errors.")
   }
 }
